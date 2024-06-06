@@ -17,8 +17,8 @@ public class YopmailPage extends AbstractPage {
     @FindBy(xpath = "//a[@href='email-generator']")
     private WebElement RandomEmailButton;
 
-    @FindBys({@FindBy(xpath = "//span[@class='genytxt']")})
-    private List<WebElement> email;
+    @FindBy(xpath = "//div[contains(@class,'segen')]")
+    private WebElement email;
 
     @FindBy(xpath = "//span[text()='Проверить почту']")
     private WebElement emailReceived;
@@ -43,8 +43,8 @@ public class YopmailPage extends AbstractPage {
 
     public String getEmail() {
         System.out.println("New Email:");
-        System.out.println(email.get(0).getText() + "@yopmail.com");
-        return email.get(0).getText() + "@yopmail.com";
+        System.out.println(email.getText() + "@yopmail.com");
+        return email.getText() + "@yopmail.com";
     }
 
 //    public String getEmailTotalEstimatedCost() {
