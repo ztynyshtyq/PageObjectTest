@@ -42,12 +42,14 @@ public class YopmailPage extends AbstractPage {
     }
 
     public String getEmail() {
+        System.out.println("New Email:");
+        System.out.println(email.get(0).getText() + "@yopmail.com");
         return email.get(0).getText() + "@yopmail.com";
     }
 
-    public String getEmailTotalEstimatedCost() {
-        return EmailTotalEstimatedCost.getText().split(" ")[4];
-    }
+//    public String getEmailTotalEstimatedCost() {
+//        return EmailTotalEstimatedCost.getText().split(" ")[4];
+//    }
 
     public void openEmailsReceived() {
         actions.moveToElement(emailReceived).click().build().perform();

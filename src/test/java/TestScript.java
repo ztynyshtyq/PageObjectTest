@@ -48,7 +48,7 @@ public class TestScript {
         String email = yopmailPage.getEmail();
         System.out.println(email);
 
-        driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
+        driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString() );
 
         pricingCalculatorPage.emailEstimate();
         pricingCalculatorPage.waitOnPage();
